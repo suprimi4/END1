@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                <Label layoutX="137.0" layoutY="150.0" text="Логин" />
+                <Label layoutX="133.0" layoutY="229.0" text="Пароль" />
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Button fx:id="loginButton" layoutX="74.0" layoutY="281.0" mnemonicParsing="false" onAction="#activeLoginButton" text="Войти" />
+                <PasswordField fx:id="passwordField" layoutX="24.0" layoutY="225.0" />
+                <TextField fx:id="usernameField" layoutX="27.0" layoutY="146.0" />
+                <Label layoutX="54.0" layoutY="56.0" prefHeight="17.0" prefWidth="94.0" text="Авторизация">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+            </children></AnchorPane>
+    </children>
+</HBox>

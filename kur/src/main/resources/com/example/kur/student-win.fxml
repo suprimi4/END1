@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StudentWin">
+    <TableView fx:id="taskTable">
+        <columns>
+            <TableColumn fx:id="taskNameColumn" prefWidth="150" text="Название задания" />
+            <TableColumn fx:id="taskCommentColumn" prefWidth="200" text="Комментарий к заданию" />
+            <TableColumn fx:id="taskStatusColumn" prefWidth="100" text="Status" />
+            <TableColumn fx:id="taskFileColumn" prefWidth="100" text="Файл для просмтора" />
+            <TableColumn fx:id="taskTextAnswerColumn" prefWidth="200" text="Текстовый ответ" />
+            <TableColumn fx:id="taskAnswerFileColumn" prefWidth="150" text="Ответ в виде файла" />
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <Label text="Текстовый ответ" />
+        <TextField fx:id="textAnswerField" promptText="Enter text answer..." />
+        <Button onAction="#saveTextAnswer" text="Добавить" />
+      <Button mnemonicParsing="false" onAction="#deleteTextAnswer" text="Удалить" />
+    </HBox>
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Label text="Прикрепить файл" />
+         <Button mnemonicParsing="false" onAction="#addAnswerFile" text="Выбрать файл" />
+      </children>
+   </HBox>
+</VBox>

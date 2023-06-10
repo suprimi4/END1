@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TeacherWin">
+    <children>
+        <VBox layoutX="14.0" layoutY="25.0" spacing="10">
+            <TableView fx:id="taskTable" editable="true" prefHeight="200">
+                <columns>
+                    <TableColumn fx:id="taskNameColumn" prefWidth="200" text="Название задания">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="name" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="taskCommentColumn" prefWidth="300" text="Комментарий к заданию">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="comment" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="taskFileColumn" prefWidth="150" text="Задание">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="file" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="taskTextAnswerColumn" prefWidth="200" text="Текстовый ответ">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="textAnswer" />
+                        </cellValueFactory>
+                    </TableColumn>
+
+                    <TableColumn fx:id="taskAnswerFileColumn" prefWidth="150" text="Файл с ответом">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="answerFile" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="taskStatusColumn" prefWidth="100" text="Статус выполения">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="status" />
+                        </cellValueFactory>
+                    </TableColumn>
+
+                </columns>
+            </TableView>
+
+            <HBox spacing="10">
+            <HBox prefHeight="100.0" prefWidth="316.0">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="180.0">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="104.0" text="Название задания" />
+                        <Label prefHeight="35.0" prefWidth="152.0" text="Комментарий к заданию" />
+                        <Label prefHeight="25.0" prefWidth="83.0" text="Статус задания" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="100.0" prefWidth="131.0">
+                     <children>
+                        <TextField fx:id="taskNameField" prefHeight="25.0" prefWidth="115.0" />
+                        <TextField fx:id="taskCommentField" />
+                        <TextField fx:id="taskStatusField" />
+                        <Button mnemonicParsing="false" onAction="#handleAddTaskButtonAction" prefHeight="25.0" prefWidth="130.0" text="Добавить" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#handleDeleteTask" text="Удалить" />
+
+                <Button onAction="#handleMarkCompleteButtonAction" text="Статус задания" />
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>
